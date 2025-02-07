@@ -2,7 +2,7 @@ import { LoaderCircle } from 'lucide-react';
 
 const Loading = () => {
     return (
-        <LoaderCircle size={64} className="animate-rotate"/>
+        <LoaderCircle size={64} className="animate-spin"/>
     );
     }
 

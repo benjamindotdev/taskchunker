@@ -27,20 +27,20 @@ const ChunkCard = ({ chunk, handleChunkSubmit }) => {
 
     return (
         <li
-            className='flex flex-col justify-between text-2xl col-span-1 card p-4 rounded-xl border-2 border-white hover:border-orange-600 hover:scale-105'
+            className='flex flex-col justify-between text-2xl col-span-1 w-4/6 card p-4 rounded-xl border-2 border-zinc-600 hover:border-orange-600 hover:scale-105 transition-all'
         >
             {
                 isEditing ? (
                     <input
                         onChange={handleInputChange}
                         placeholder={editedPrompt === '' ? chunk.description : editedPrompt}
-                        className='text-lg p-2 rounded-xl'
+                        className='text-lg p-2 rounded-xl w-full text-zinc-800 font-bold'
                     />
                 ) : (
                     <p className='text-lg'>{chunk.description}</p>
                 )
             }
-            <div className='flex flex-row gap-4 p-4'>
+            <div className='flex flex-row gap-4 p-4 items-center justify-center'>
                 <ChunkButton onClick={handleEdit}>
                     <Pencil size={24} />
                 </ChunkButton>
