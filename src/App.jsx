@@ -29,7 +29,7 @@ function App() {
     console.log('chunks:', chunks.response);
   }, [chunks]);
 
-  const serverUrl = 'https://taskchunker-backend-production.up.railway.app/api/v1/chat';
+  const serverUrl = import.meta.env.VITE_SERVER_URL;
 
   const handleInitialPromptChange = (e) => {
     setInitialPrompt(e.target.value)
